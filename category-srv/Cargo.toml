@@ -1,0 +1,12 @@
+[package]
+name = "category-srv"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+prost = "0.13"
+prost-types = "0.13"
+tonic = "0.12"
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres"] }
+blog-proto = { path = "../blog-proto" }
