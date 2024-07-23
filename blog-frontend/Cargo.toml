@@ -1,0 +1,17 @@
+[package]
+name = "blog-frontend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+prost = "0.13"
+prost-types = "0.13"
+tonic = "0.12"
+axum = "0.7.5"
+tera = "1"
+serde = { version = "1", features = ["derive"] }
+chrono = "0.4"
+
+blog-proto = { path = "../blog-proto" }
+blog-types = { path = "../blog-types" }

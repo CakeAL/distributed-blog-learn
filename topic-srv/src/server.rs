@@ -164,7 +164,7 @@ impl TopicService for Topic {
         let row = sqlx::query(
             r#"
             select count(*)
-            form topics
+            from topics
             WHERE 1=1
                 AND ($1::int IS NULL OR category_id = $1::int)
                 AND ($2::text IS NULL OR title ILIKE CONCAT('%',$2::text,'%'))

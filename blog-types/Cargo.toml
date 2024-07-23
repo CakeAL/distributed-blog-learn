@@ -1,0 +1,12 @@
+[package]
+name = "blog-types"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prost-types = "0.13"
+tonic = "0.12"
+serde = { version = "1", features = ["derive"] }
+chrono = "0.4"
+
+blog-proto = { path = "../blog-proto" }
