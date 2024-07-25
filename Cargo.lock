@@ -259,6 +259,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "blog-backend"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "blog-proto",
+ "blog-types",
+ "chrono",
+ "prost",
+ "prost-types",
+ "serde",
+ "tera",
+ "tokio",
+ "tonic",
+]
+
+[[package]]
 name = "blog-frontend"
 version = "0.1.0"
 dependencies = [

@@ -6,4 +6,4 @@ edition = "2021"
 [dependencies]
 
 [workspace]
-members = [ "admin-srv", "blog-frontend","blog-proto", "blog-types", "blog-utils", "category-srv", "topic-srv"]
+members = [ "admin-srv", "blog-backend", "blog-frontend","blog-proto", "blog-types", "blog-utils", "category-srv", "topic-srv"]
