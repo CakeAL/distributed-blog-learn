@@ -5,6 +5,7 @@ pub use cate::*;
 
 mod auth;
 mod cate;
+pub mod cookie;
 
 pub async fn index() -> (StatusCode, HeaderMap) {
     redirect("/login")

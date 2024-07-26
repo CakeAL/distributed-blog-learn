@@ -13,6 +13,6 @@ mod tests{
     #[test]
     fn test_hash() {
         let res = hash("123456");
-        dbg!(res.unwrap())
+        dbg!(res.unwrap());
     }
 }

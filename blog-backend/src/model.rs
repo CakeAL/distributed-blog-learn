@@ -1,3 +1,4 @@
+use blog_auth::Jwt;
 use blog_proto::{
     admin_service_client::AdminServiceClient, category_service_client::CategoryServiceClient, topic_service_client::TopicServiceClient
 };
@@ -8,6 +9,7 @@ pub struct AppState {
     pub topic: TopicServiceClient<tonic::transport::Channel>,
     pub admin: AdminServiceClient<tonic::transport::Channel>,
     pub tera: Tera,
+    pub jwt: Jwt,
 }
 
 impl AppState {
@@ -16,7 +18,8 @@ impl AppState {
         topic: TopicServiceClient<tonic::transport::Channel>,
         admin: AdminServiceClient<tonic::transport::Channel>,
         tera: Tera,
+        jwt: Jwt,
     ) -> Self {
-        Self { cate, topic, admin, tera }
+        Self { cate, topic, admin, tera, jwt }
     }
 }

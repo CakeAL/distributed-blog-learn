@@ -41,7 +41,10 @@ pub async fn login(
         Some(la) => la,
         None => return Err("登陆失败".to_string()),
     };
-    let cookie = format!("token={}", &logined_admin.email);
+    // 登陆成功后生成 jwt token 保存在 cookie 中
+    let claims = state.jwt.new_claims(logined_admin.id, logined_admin.email);
+    let token = state.jwt.token(&claims).map_err(|err| err.to_string())?;
+    let cookie = format!("token={}", token);
     Ok(redirect_with_cookie("/m/cate", Some(&cookie)))
 }
 

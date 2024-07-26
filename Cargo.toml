@@ -1,9 +1,12 @@
-[package]
-name = "distributed-blog"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-
 [workspace]
-members = [ "admin-srv", "blog-backend", "blog-frontend","blog-proto", "blog-types", "blog-utils", "category-srv", "topic-srv"]
+members = [
+    "admin-srv",
+    "blog-auth",
+    "blog-backend",
+    "blog-frontend",
+    "blog-proto",
+    "blog-types",
+    "blog-utils",
+    "category-srv",
+    "topic-srv",
+]
